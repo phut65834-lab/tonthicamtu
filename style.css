@@ -1,3 +1,17 @@
+<script>
+  const elements = document.querySelectorAll('.fade-in');
+
+  window.addEventListener('scroll', () => {
+    elements.forEach(el => {
+      const pos = el.getBoundingClientRect().top;
+      const screen = window.innerHeight;
+
+      if (pos < screen - 100) {
+        el.classList.add('show');
+      }
+    });
+  });
+</script>
 body {
   font-family: Arial, sans-serif;
   margin: 0;
